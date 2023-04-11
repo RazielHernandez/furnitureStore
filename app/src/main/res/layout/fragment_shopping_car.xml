@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_background">
+
+
+    <TextView
+        android:id="@+id/car_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_shopping_car"
+        style="@style/title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/car_not_logged"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please log in to see your basket"
+        android:textSize="20dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="@+id/car_title"
+        app:layout_constraintTop_toBottomOf="@+id/car_title"/>
+
+    <LinearLayout
+        android:id="@+id/car_line_logged"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/car_title"
+        app:layout_constraintTop_toBottomOf="@+id/car_title"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/car_line_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/car_title"
+            app:layout_constraintTop_toBottomOf="@+id/car_title">
+
+            <TextView
+                android:id="@+id/car_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order total: $ 9,999.99"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/text_sale_price"
+                android:layout_margin="16dp"
+                android:layout_weight="7"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/car_button_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Buy"
+                android:layout_margin="16dp"
+                android:drawableLeft="@drawable/ic_shopping_cart_24"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="64dp"
+            app:layout_constraintStart_toStartOf="@+id/car_line_total"
+            app:layout_constraintTop_toBottomOf="@+id/car_line_total">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="16dp"
+                android:layout_marginBottom="32dp"
+                android:id="@+id/recycle_view_car"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

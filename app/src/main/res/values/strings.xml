@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">FurnitureStore</string>
+
+    <string name="channel_name">com.fekea.furniturestore</string>
+    <string name="channel_description">com.fekea.furniturestore</string>
+    <string name="channel_id">CHANNEL_ID</string>
+
+    <string name="title_addresses">Your addresses</string>
+    <string name="description_addresses">In this section you can manage your delivery addresses, you can select an address as favorite, add, edit or even delete an address</string>
+    <string name="title_credit_cards">Your credit cards</string>
+    <string name="description_credit_cards">In this section you can manage your credit cards, you can select an credit card as favorite, add, edit or even delete an payment method</string>
+    <string name="title_favorites">Your furniture saved</string>
+    <string name="title_shopping_car">Shopping car</string>
+
+    <string name="button_3D_view">View in 3D</string>
+    <string name="button_in_stores">Look it at stores</string>
+    <string name="button_favorite_remove">Remove</string>
+
+    <string name="subtitle_detail_description">Description</string>
+    <string name="subtitle_detail_size">Size</string>
+    <string name="subtitle_detail_color">Colors</string>
+    <string name="subtitle_detail_quantity">Quantity</string>
+    <string name="subtitle_detail_details">Details</string>
+
+    <string name="msg_about">Developed by Carlos Hernandez and Oscar Miralles for Centennial College Android Course</string>
+    <string name="app_version">Version 0.1</string>
+
+    <string name="label_name">Name:</string>
+    <string name="label_last_name">Last Name:</string>
+    <string name="label_telephone">Telephone:</string>
+    <string name="label_address_name">Address name:</string>
+    <string name="label_address">Address: </string>
+    <string name="label_postal_code">Postal code:</string>
+
+    <string name="hint_name">Type your name(s)</string>
+    <string name="hint_last_name">Type your last name</string>
+    <string name="hint_telephone">Type your telephone</string>
+    <string name="hint_address_name">A name to identify this address</string>
+    <string name="hint_address">Input your address</string>
+    <string name="hint_postal_code">6 digits postal code</string>
+
+</resources>

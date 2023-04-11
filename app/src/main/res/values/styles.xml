@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="title_base">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <style name="title" parent="title_base">
+        <item name="android:textSize">26sp</item>
+
+    </style>
+
+    <style name="subtitle" parent="title_base">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="furniture_category">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">8sp</item>
+        <item name="android:paddingRight">8sp</item>
+    </style>
+
+    <style name="vertical_margin">
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="horizontal_margin">
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="margin_all">
+        <item name="android:layout_margin">16dp</item>
+    </style>
+</resources>
