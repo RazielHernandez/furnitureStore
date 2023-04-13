@@ -9,10 +9,8 @@
         android:id="@+id/added_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your item was added to your shopping car"
-        android:textSize="16dp"
-        android:textStyle="italic"
-        android:layout_margin="32dp"/>
+        android:text="@string/label_item_added"
+        style="@style/field"/>
 
 
 </LinearLayout>

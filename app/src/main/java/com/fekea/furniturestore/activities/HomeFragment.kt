@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
+import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,6 +27,7 @@ class HomeFragment : Fragment(), ItemClickEvent {
     private lateinit var listOfFurnitures: MutableList<DBFurniture>
     private lateinit var itemsOnSale: MutableList<DBFurniture>
     private lateinit var itemsOnBest: MutableList<DBFurniture>
+    private lateinit var searchView: SearchView
 
     companion object {
         const val TAG = "com.fekea.furniturestore.ItemListActivity"
@@ -47,11 +50,80 @@ class HomeFragment : Fragment(), ItemClickEvent {
         adapterForBest = SmallFurnitureAdapter(this)
         recycleViewBest.adapter = adapterForBest
 
+        searchView = v.findViewById<SearchView> (R.id.home_search)
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                Log.e(TAG,"onQueryTextSubmit")
+                val intent = Intent(activity, ItemListActivity::class.java)
+                intent.putExtra("category",query)
+                startActivity(intent)
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                Log.e(TAG, "onQueryTextChange")
+                return false
+            }
+        })
+
+        v.findViewById<TextView>(R.id.search_category_all).setOnClickListener {
+            onCategoryClicked(v.findViewById<TextView>(R.id.search_category_all).text.toString())
+        }
+
+        v.findViewById<TextView>(R.id.search_category_bedroom).setOnClickListener {
+            onCategoryClicked(v.findViewById<TextView>(R.id.search_category_bedroom).text.toString())
+        }
+
+        v.findViewById<TextView>(R.id.search_category_kitchen).setOnClickListener {
+            onCategoryClicked(v.findViewById<TextView>(R.id.search_category_kitchen).text.toString())
+        }
+
+        v.findViewById<TextView>(R.id.search_category_kitchen).setOnClickListener {
+            onCategoryClicked(v.findViewById<TextView>(R.id.search_category_kitchen).text.toString())
+        }
+
+        v.findViewById<TextView>(R.id.search_category_living).setOnClickListener {
+            onCategoryClicked(v.findViewById<TextView>(R.id.search_category_living).text.toString())
+        }
+
+        v.findViewById<TextView>(R.id.search_category_bathroom).setOnClickListener {
+            onCategoryClicked(v.findViewById<TextView>(R.id.search_category_bathroom).text.toString())
+        }
+
+        v.findViewById<TextView>(R.id.search_category_garden).setOnClickListener {
+            onCategoryClicked(v.findViewById<TextView>(R.id.search_category_garden).text.toString())
+        }
+
+        v.findViewById<TextView>(R.id.search_category_chair).setOnClickListener {
+            onCategoryClicked(v.findViewById<TextView>(R.id.search_category_chair).text.toString())
+        }
+
+        v.findViewById<TextView>(R.id.search_category_lamp).setOnClickListener {
+            onCategoryClicked(v.findViewById<TextView>(R.id.search_category_lamp).text.toString())
+        }
+
+        v.findViewById<TextView>(R.id.search_category_sofa).setOnClickListener {
+            onCategoryClicked(v.findViewById<TextView>(R.id.search_category_sofa).text.toString())
+        }
+
+        v.findViewById<TextView>(R.id.search_category_table).setOnClickListener {
+            onCategoryClicked(v.findViewById<TextView>(R.id.search_category_table).text.toString())
+        }
+
+        v.findViewById<TextView>(R.id.search_category_cabinet).setOnClickListener {
+            onCategoryClicked(v.findViewById<TextView>(R.id.search_category_cabinet).text.toString())
+        }
+
         setupLiveDataListener()
 
         furnitureModel.getFurnitureList()
-        //furnitureModel.getFurnitureListByField("room","Bedroom")
         return v
+    }
+
+    fun onCategoryClicked(category: String) {
+        val intent = Intent(activity, ItemListActivity::class.java)
+        intent.putExtra("category",category)
+        startActivity(intent)
     }
 
     override fun onItemClicked(id: String) {

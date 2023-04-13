@@ -82,9 +82,9 @@ data class DBFurniture(
             result = true
         } else if (shortDescription.lowercase().contains(query.lowercase())) {
             result = true
-        } else if (longDescription.lowercase().contains(query.lowercase())) {
+        } /*else if (longDescription.lowercase().contains(query.lowercase())) {
             result = true
-        }
+        }*/
         Log.e("TAG", "Item $model has search value: $result")
         return result
     }

@@ -13,15 +13,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Card name:"/>
+            android:text="@string/label_card_name"
+            style="@style/dialog_text"/>
 
         <EditText
             android:id="@+id/card_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="A name to identify this credit card"
+            android:hint="@string/hint_card_name"
             android:inputType="text"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            style="@style/dialog_hint"/>
 
     </LinearLayout>
 
@@ -33,15 +35,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Card number:"/>
+            android:text="@string/label_card_number"
+            style="@style/dialog_text"/>
 
         <EditText
             android:id="@+id/card_number"
             android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Card number"
-            android:minHeight="48dp"/>
+            android:hint="@string/hint_card_number"
+            android:minHeight="48dp"
+            style="@style/dialog_hint"/>
 
     </LinearLayout>
 
@@ -53,15 +57,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Expire Date:"/>
+            android:text="@string/label_card_expire_date"
+            style="@style/dialog_text"/>
 
         <EditText
             android:id="@+id/card_expire_date"
             android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="MMYY"
-            android:minHeight="48dp"/>
+            android:hint="@string/hint_card_expire_date"
+            android:minHeight="48dp"
+            style="@style/dialog_hint"/>
     </LinearLayout>
 
     <LinearLayout
@@ -72,15 +78,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CVV:"/>
+            android:text="@string/label_card_cvv"
+            style="@style/dialog_text"/>
 
         <EditText
             android:id="@+id/card_cvv"
             android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="3 digits security code"
-            android:minHeight="48dp"/>
+            android:hint="@string/hint_card_cvv"
+            android:minHeight="48dp"
+            style="@style/dialog_hint"/>
 
     </LinearLayout>
 

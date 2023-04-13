@@ -12,8 +12,8 @@ class SmallFurnitureViewHolder(private val binding: CardviewFurnitureSmallBindin
     fun bind(item: DBFurniture) {
         Log.e("HOLDER", "Init card ${item.id}")
         binding.cardTitle.text = item.model
-        binding.cardRating.text = item.rating.toString()
-        binding.cardPrice.text = "$ ${item.price}"
+        binding.cardRating.text = "Rating: ${item.rating.toString()}"
+        binding.cardPrice.text = "${item.priceFormatted()}"
         if (item.images.isNotEmpty()){
             Picasso.with(binding.root.context).load(item.images[0]).into(binding.cardImage)
         }

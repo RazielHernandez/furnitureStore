@@ -84,6 +84,10 @@
             android:exported="true">
         </activity>
 
+        <activity android:name=".activities.ItemListActivity"
+            android:exported="true">
+        </activity>
+
 
     </application>
 

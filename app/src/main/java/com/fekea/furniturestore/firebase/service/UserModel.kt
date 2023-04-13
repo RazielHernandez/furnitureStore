@@ -45,38 +45,6 @@ class UserModel: ViewModel() {
         }
     }
 
-    /*fun updateCard(card: DBUserCreditCard, user:String, id: String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            val data = MainActivity.db?.updateCreditCard(user,id,card)
-            Log.e("TAG", "Updated with: $data")
-            _completeLiveData.postValue(data)
-        }
-    }
-
-    fun updateAddress(address: DBUserAddress, user:String, id: String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            val data = MainActivity.db?.updateAddress(user,id,address)
-            Log.e("TAG", "Updated with: $data")
-            _completeLiveData.postValue(data)
-        }
-    }
-
-    fun deleteAddress(user: String, address: String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            val data = MainActivity.db?.deleteAddress(user,address)
-            Log.e("TAG", "Deleted with: $data")
-            _completeLiveData.postValue(data)
-        }
-    }
-
-    fun deleteCard(user: String, card: String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            val data = MainActivity.db?.deleteCreditCard(user,card)
-            Log.e("TAG", "Deleted with: $data")
-            _completeLiveData.postValue(data)
-        }
-    }*/
-
     fun deleteUser(user: String) {
         viewModelScope.launch(Dispatchers.IO) {
             val data = MainActivity.db?.deleteUser(user)

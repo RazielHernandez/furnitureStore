@@ -12,14 +12,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email:"/>
+            android:text="@string/label_signup_email"
+            style="@style/dialog_text"/>
         <EditText
             android:id="@+id/signup_mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type your email"
+            android:hint="@string/label_signup_email"
             android:inputType="text"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            style="@style/dialog_hint"/>
     </LinearLayout>
 
     <LinearLayout
@@ -29,14 +31,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create a password:"/>
+            android:text="@string/label_signup_password"
+            style="@style/dialog_text"/>
         <EditText
             android:id="@+id/signup_password"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:minHeight="48dp"/>
+            android:hint="@string/hint_signup_password"
+            android:minHeight="48dp"
+            style="@style/dialog_hint"/>
     </LinearLayout>
 
     <LinearLayout
@@ -46,14 +50,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Confirm password:"/>
+            android:text="@string/label_signup_confirm"
+            style="@style/dialog_text"/>
         <EditText
             android:id="@+id/signup_confirm"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:minHeight="48dp"/>
+            android:hint="@string/hint_signup_confirm"
+            android:minHeight="48dp"
+            style="@style/dialog_hint"/>
     </LinearLayout>
 
 </LinearLayout>

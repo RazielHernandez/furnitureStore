@@ -28,85 +28,90 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/search_search"
         app:layout_constraintStart_toStartOf="parent"
-        android:scrollbars="none">
+        android:scrollbars="none"
+        style="@style/margin_all">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="15dp"
-            android:paddingTop="15dp">
+            style="@style/horizontal_margin">
 
             <TextView
+                android:id="@+id/search_category_all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="All"
-                android:paddingLeft="15dp"/>
+                style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_bedroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bedroom"
+                style="@style/furniture_category" />
+
+            <TextView
+                android:id="@+id/search_category_kitchen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kitchen"
+                style="@style/furniture_category"/>
+
+            <TextView
+                android:id="@+id/search_category_living"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Living room"
+                style="@style/furniture_category"/>
+
+            <TextView
+                android:id="@+id/search_category_bathroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bathroom"
+                style="@style/furniture_category"/>
+
+            <TextView
+                android:id="@+id/search_category_garden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Garden"
+                style="@style/furniture_category"/>
+
+            <TextView
+                android:id="@+id/search_category_chair"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chairs"
-                android:paddingLeft="15dp"/>
+                style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_lamp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lamps"
-                android:paddingLeft="15dp"/>
+                style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_sofa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sofas"
-                android:paddingLeft="15dp"/>
+                style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_table"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Table"
-                android:paddingLeft="15dp"/>
+                style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_cabinet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cabinet"
-                android:paddingLeft="15dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="All"
-                android:paddingLeft="15dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Chairs"
-                android:paddingLeft="15dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lamps"
-                android:paddingLeft="15dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sofas"
-                android:paddingLeft="15dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Table"
-                android:paddingLeft="15dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cabinet"
-                android:paddingLeft="15dp"/>
+                style="@style/furniture_category"/>
 
         </LinearLayout>
 

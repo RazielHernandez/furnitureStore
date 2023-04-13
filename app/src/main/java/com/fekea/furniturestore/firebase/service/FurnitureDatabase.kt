@@ -246,8 +246,31 @@ class FurnitureDatabase (appContext: Context) {
         return result
     }
 
-    suspend fun getFurnitureListByFieldTest(field: String, query: String): List<DBFurniture> {
+    suspend fun getFurnitureListByWord(query: String): List<DBFurniture> {
         var result = mutableListOf<DBFurniture>()
+        db.collection(COLLECTION_FURNITURE)
+            .get()
+            .addOnSuccessListener { queryDocumentSnapshots ->
+                Log.e(TAG, "List founded ${queryDocumentSnapshots.size()}")
+                for (snapshot in queryDocumentSnapshots) {
+                    var actual = snapshot.toObject<DBFurniture>()
+                    if (actual.searchWord(query)) {
+                        actual.id = snapshot.id
+                        result.add(actual)
+                    }
+                }
+                //result.addAll(queryDocumentSnapshots.toObjects<DBFurniture>())
+            }
+            .addOnFailureListener {
+                Log.e(TAG, "Error on get furniture list. Exception: $it")
+            }
+            .await()
+        return result
+    }
+
+    /*suspend fun getFurnitureListByFieldTest(field: String, query: String): List<DBFurniture> {
+        var result = mutableListOf<DBFurniture>()
+        Log.e(TAG, "Searching for $query in $field")
         db.collection(COLLECTION_FURNITURE)
             .whereGreaterThanOrEqualTo(field, query)
             .whereLessThanOrEqualTo(field,query)
@@ -261,7 +284,7 @@ class FurnitureDatabase (appContext: Context) {
             }
             .await()
         return result
-    }
+    }*/
 
     suspend fun getFurnitureList(): List<DBFurniture> {
         var result = mutableListOf<DBFurniture>()

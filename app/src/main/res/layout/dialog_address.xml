@@ -13,7 +13,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_address_name"/>
+            android:text="@string/label_address_name"
+            style="@style/dialog_text"/>
 
         <EditText
             android:id="@+id/address_name"
@@ -21,7 +22,8 @@
             android:layout_height="wrap_content"
             android:hint="@string/hint_address_name"
             android:inputType="text"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            style="@style/dialog_hint"/>
 
     </LinearLayout>
 
@@ -33,7 +35,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_address"/>
+            android:text="@string/label_address"
+            style="@style/dialog_text"/>
 
         <EditText
             android:id="@+id/address_address"
@@ -41,7 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_address"
-            android:minHeight="48dp"/>
+            android:minHeight="48dp"
+            style="@style/dialog_hint"/>
 
     </LinearLayout>
 
@@ -53,7 +57,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_postal_code"/>
+            android:text="@string/label_postal_code"
+            style="@style/dialog_text"/>
 
         <EditText
             android:id="@+id/address_postal_code"
@@ -62,7 +67,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_postal_code"
-            android:minHeight="48dp"/>
+            android:minHeight="48dp"
+            style="@style/dialog_hint"/>
     </LinearLayout>
 
     <LinearLayout
@@ -73,7 +79,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_telephone"/>
+            android:text="@string/label_telephone"
+            style="@style/dialog_text"/>
 
         <EditText
             android:id="@+id/address_telephone"
@@ -81,7 +88,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_telephone"
-            android:minHeight="48dp"/>
+            android:minHeight="48dp"
+            style="@style/dialog_hint"/>
 
     </LinearLayout>
 

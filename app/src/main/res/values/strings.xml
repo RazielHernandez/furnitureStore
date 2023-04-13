@@ -31,6 +31,19 @@
     <string name="label_address_name">Address name:</string>
     <string name="label_address">Address: </string>
     <string name="label_postal_code">Postal code:</string>
+    <string name="label_card_name">Card name:</string>
+    <string name="label_card_number">Card number:</string>
+    <string name="label_card_expire_date">Expire Date:</string>
+    <string name="label_card_cvv">CVV:</string>
+    <string name="label_item_added">Your item was added to your shopping car</string>
+    <string name="label_login_login">Login:</string>
+    <string name="label_login_password">Password:</string>
+    <string name="label_password_actual">Actual Password:</string>
+    <string name="label_password_new">New Password:</string>
+    <string name="label_password_confirm">Confirm new password:</string>
+    <string name="label_signup_email">Your email:</string>
+    <string name="label_signup_password">Create a password</string>
+    <string name="label_signup_confirm">Confirm the password</string>
 
     <string name="hint_name">Type your name(s)</string>
     <string name="hint_last_name">Type your last name</string>
@@ -38,5 +51,17 @@
     <string name="hint_address_name">A name to identify this address</string>
     <string name="hint_address">Input your address</string>
     <string name="hint_postal_code">6 digits postal code</string>
+    <string name="hint_card_name">A name to identify this credit card</string>
+    <string name="hint_card_number">Card number</string>
+    <string name="hint_card_expire_date">MM/YY</string>
+    <string name="hint_card_cvv">3 digits security code</string>
+    <string name="hint_login_login">Username</string>
+    <string name="hint_login_password">Password</string>
+    <string name="hint_password_actual">Type your actual password</string>
+    <string name="hint_password_new">Type a new password</string>
+    <string name="hint_password_confirm">Confirm new password</string>
+    <string name="hint_signup_email">Enter your email</string>
+    <string name="hint_signup_password">Create a password</string>
+    <string name="hint_signup_confirm">Confirm the password</string>
 
 </resources>

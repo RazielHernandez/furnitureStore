@@ -1,7 +1,9 @@
 package com.fekea.furniturestore.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,7 +18,6 @@ class ItemListActivity: AppCompatActivity(), ItemClickEvent {
     private lateinit var furnitureModel: FurnitureModel
     private lateinit var adapter: SmallFurnitureAdapter
 
-    var filterByName = ""
     var filterByCategory = "All"
     var filterByWord = ""
 
@@ -36,15 +37,83 @@ class ItemListActivity: AppCompatActivity(), ItemClickEvent {
 
         setupLiveDataListener()
 
-        furnitureModel.getFurnitureListByFieldTest("category","Table")
+        filterByCategory = intent.getStringExtra("category").toString()
+
+        onCategoryClicked()
+
+        findViewById<TextView>(R.id.search_category_all).setOnClickListener {
+            filterByCategory = findViewById<TextView>(R.id.search_category_all).text.toString()
+            onCategoryClicked()
+        }
+
+        findViewById<TextView>(R.id.search_category_bedroom).setOnClickListener {
+            filterByCategory = findViewById<TextView>(R.id.search_category_bedroom).text.toString()
+            onCategoryClicked()
+        }
+
+        findViewById<TextView>(R.id.search_category_kitchen).setOnClickListener {
+            filterByCategory = findViewById<TextView>(R.id.search_category_kitchen).text.toString()
+            onCategoryClicked()
+        }
+
+        findViewById<TextView>(R.id.search_category_living).setOnClickListener {
+            filterByCategory = findViewById<TextView>(R.id.search_category_living).text.toString()
+            onCategoryClicked()
+        }
+
+        findViewById<TextView>(R.id.search_category_bathroom).setOnClickListener {
+            filterByCategory = findViewById<TextView>(R.id.search_category_bathroom).text.toString()
+            onCategoryClicked()
+        }
+
+        findViewById<TextView>(R.id.search_category_garden).setOnClickListener {
+            filterByCategory = findViewById<TextView>(R.id.search_category_garden).text.toString()
+            onCategoryClicked()
+        }
+
+        findViewById<TextView>(R.id.search_category_chair).setOnClickListener {
+            filterByCategory = findViewById<TextView>(R.id.search_category_chair).text.toString()
+            onCategoryClicked()
+        }
+
+        findViewById<TextView>(R.id.search_category_lamp).setOnClickListener {
+            filterByCategory = findViewById<TextView>(R.id.search_category_lamp).text.toString()
+            onCategoryClicked()
+        }
+
+        findViewById<TextView>(R.id.search_category_sofa).setOnClickListener {
+            filterByCategory = findViewById<TextView>(R.id.search_category_sofa).text.toString()
+            onCategoryClicked()
+        }
+
+        findViewById<TextView>(R.id.search_category_table).setOnClickListener {
+            filterByCategory = findViewById<TextView>(R.id.search_category_table).text.toString()
+            onCategoryClicked()
+        }
+
+        findViewById<TextView>(R.id.search_category_cabinet).setOnClickListener {
+            filterByCategory = findViewById<TextView>(R.id.search_category_cabinet).text.toString()
+            onCategoryClicked()
+        }
+    }
+
+    fun onCategoryClicked() {
+        if (filterByCategory.equals("All")) {
+            furnitureModel.getFurnitureList()
+        }else {
+            furnitureModel.getFurnitureListByWord(filterByCategory)
+        }
     }
 
     override fun onItemClicked(id: String) {
         Log.e(TAG, "Item $id clicked")
+        val intent = Intent(this, ItemDetailActivity::class.java)
+        intent.putExtra("id", id)
+        startActivity(intent)
     }
 
     private fun query() {
-        Log.e(TAG, "Starting query with Name: $filterByName Category: $filterByCategory Word: $filterByWord")
+        Log.e(TAG, "Starting query with Category: $filterByCategory Word: $filterByWord")
     }
 
     private fun setupLiveDataListener() {

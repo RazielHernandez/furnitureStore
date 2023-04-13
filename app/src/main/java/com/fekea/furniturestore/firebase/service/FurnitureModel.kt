@@ -60,6 +60,14 @@ class FurnitureModel: ViewModel() {
         }
     }
 
+    /*fun getFurnitureListByField(field: String, query: String) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val data = MainActivity.db?.getFurnitureListByField(field, query)
+            Log.e("TAG", "List of furniture: $data")
+            _furnitureListLiveData.postValue(data)
+        }
+    }*/
+
     fun getFurnitureListByField(field: String, query: String) {
         viewModelScope.launch(Dispatchers.IO) {
             val data = MainActivity.db?.getFurnitureListByField(field, query)
@@ -68,9 +76,9 @@ class FurnitureModel: ViewModel() {
         }
     }
 
-    fun getFurnitureListByFieldTest(field: String, query: String) {
+    fun getFurnitureListByWord(query: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            val data = MainActivity.db?.getFurnitureListByFieldTest(field, query)
+            val data = MainActivity.db?.getFurnitureListByWord(query)
             Log.e("TAG", "List of furniture: $data")
             _furnitureListLiveData.postValue(data)
         }

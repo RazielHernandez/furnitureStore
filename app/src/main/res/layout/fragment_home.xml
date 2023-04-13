@@ -6,21 +6,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/gray_background">
 
-    <EditText
+    <SearchView
         android:id="@+id/home_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
         android:background="@drawable/rounded_edittext"
-        android:drawableLeft="@drawable/ic_search_small"
-        android:drawableTint="@color/gray_background"
         android:hint="Search furniture"
+        android:layout_margin="15dp"
         android:minHeight="48dp"
-        android:padding="10dp"
         android:textColor="@color/gray_contrast"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <HorizontalScrollView
         android:id="@+id/home_categories"
@@ -37,66 +34,77 @@
             style="@style/horizontal_margin">
 
             <TextView
+                android:id="@+id/search_category_all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="All"
                 style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_bedroom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bedroom"
                 style="@style/furniture_category" />
 
             <TextView
+                android:id="@+id/search_category_kitchen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kitchen"
                 style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_living"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Living room"
                 style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_bathroom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bathroom"
                 style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_garden"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Garden"
                 style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_chair"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chairs"
                 style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_lamp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lamps"
                 style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_sofa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sofas"
                 style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_table"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Table"
                 style="@style/furniture_category"/>
 
             <TextView
+                android:id="@+id/search_category_cabinet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cabinet"
@@ -116,15 +124,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_margin="16dp"
-            android:layout_marginBottom="32dp">
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="128dp"
+            >
 
             <TextView
                 android:id="@+id/home_title_sales"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/subtitle"
-                android:text="Sales"/>
+                android:text="Our Sales"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 app:layout_constraintTop_toBottomOf="@id/home_title_sales"
